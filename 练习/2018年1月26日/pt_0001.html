@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+<script type="text/javascript">
+
+    window.onload = function() {
+
+        var date = new Date();
+
+        var y = date.getFullYear();
+
+        var m = date.getMonth();
+
+        var d = date.getDate();
+
+        var xingqiji =date.getDay()
+
+        var h=date.getHours();
+
+        var m1=date.getMinutes();
+
+        var s=date.getSeconds();
+
+        var result;
+
+//        if (xingqiji =='5') {
+//
+//            result = '星期五'
+//        }
+
+        document.getElementById('dateNav').innerHTML="今天是："+y+"年"+(m+1)+"月"+d+"日"+"星期"+xingqiji;
+
+        document.getElementById('timeNav').innerHTML=h+"时"+m1+"分"+s+"秒";
+
+    }
+
+    //每秒执行一次
+    var a = 'yeah!!!'
+    alert(a)
+    console.log(a)
+
+
+    setInterval("window.onload()","1000");
+
+</script>
+
 <body>
+<div id="dateNav"></div>
+<div id="timeNav"></div>
 
 </body>
 </html>
